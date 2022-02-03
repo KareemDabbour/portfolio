@@ -24,6 +24,7 @@ header {
 .nameEffect {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .name {
@@ -38,11 +39,12 @@ header {
 }
 header h2 {
   font-size: 3vh;
+  text-align: center;
 }
 
 main {
-  min-width: 30vw;
-  width: 60vw;
+  /* min-width: 30vw; */
+  width: max(60vw, 300px);
   margin: 0 auto;
 }
 
@@ -50,12 +52,13 @@ main h1::after {
   content: "";
   margin: 1em 100% 1em 0;
   height: 3px;
-  width: 10%;
+  width: 141px;
   background: #ebb679;
   display: block;
 }
 
 section {
+  /* max-width: 50vw; */
   background: #e84e4e;
   margin: 2em auto;
   border-radius: 1em;
@@ -68,6 +71,16 @@ section:hover {
   transform: scale(1.03);
 }
 
+.imgSpan {
+  display: inline-block;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 50%;
+  padding: 3px;
+  border: 3px solid #ebb679;
+}
 .contactItems {
   display: flex;
   align-items: center;
@@ -83,7 +96,17 @@ img {
   height: 5em;
   width: 5em;
   height: auto;
+}
+
+.icon {
   filter: brightness(0) invert(1);
+}
+
+.portrait {
+  width: auto;
+  height: 107%;
+  margin-left: -20px;
+  margin-top: -5px;
 }
 
 .educationDiv,
