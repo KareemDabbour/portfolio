@@ -1,0 +1,163 @@
+body {
+  background-color: #217e80;
+  font-family: "ubuntu", "sans-serif";
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 300;
+  line-height: 1.5;
+  margin: auto;
+  color: #ffffff;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+}
+
+.nameEffect {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.name {
+  display: flex;
+}
+.char {
+  font-size: 7vh;
+}
+
+.whitespace {
+  margin: 1em;
+}
+header h2 {
+  font-size: 3vh;
+}
+
+main {
+  min-width: 30vw;
+  width: 60vw;
+  margin: 0 auto;
+}
+
+main h1::after {
+  content: "";
+  margin: 1em 100% 1em 0;
+  height: 3px;
+  width: 10%;
+  background: #ebb679;
+  display: block;
+}
+
+section {
+  background: #e84e4e;
+  margin: 2em auto;
+  border-radius: 1em;
+  padding: 2em;
+  box-shadow: 0 10px 15px #00000071;
+  transition: all 0.2s ease-in-out;
+}
+
+section:hover {
+  transform: scale(1.03);
+}
+
+.contactItems {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.contactItems img {
+  margin: auto;
+}
+
+img {
+  display: block;
+  height: 5em;
+  width: 5em;
+  height: auto;
+  filter: brightness(0) invert(1);
+}
+
+.educationDiv,
+.experienceDiv {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 1em 0;
+  gap: 1em;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+}
+
+.details h2,
+.details h3,
+.details h4 {
+  margin: 0%;
+}
+
+/* This Idea was taken from: https://dev.to/jh3y/css-glitchy-text-reveal-in-3-minutes-24pb */
+[data-char] {
+  color: transparent;
+  position: relative;
+}
+[data-char]:after {
+  animation-name: glitch-switch;
+  --txt: attr(data-char);
+  animation-duration: 0.25s;
+  animation-delay: 0.3s;
+  animation-timing-function: steps(0.5);
+  animation-iteration-count: var(--count);
+  animation-fill-mode: backwards;
+  content: var(--txt);
+  color: #ffffff;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+@keyframes glitch-switch {
+  0% {
+    content: var(--char-0);
+  }
+  10% {
+    content: var(--char-1);
+  }
+  20% {
+    content: var(--char-2);
+  }
+  30% {
+    content: var(--char-3);
+  }
+  40% {
+    content: var(--char-4);
+  }
+  50% {
+    content: var(--char-5);
+  }
+  60% {
+    content: var(--char-6);
+  }
+  70% {
+    content: var(--char-7);
+  }
+  80% {
+    content: var(--char-8);
+  }
+  90% {
+    content: var(--char-9);
+  }
+  100% {
+    content: var(--txt);
+  }
+}
