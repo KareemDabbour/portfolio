@@ -35,8 +35,9 @@ header {
 }
 
 .whitespace {
-  margin: 1em;
+  margin: 0.5em;
 }
+
 header h2 {
   font-size: 3vh;
   text-align: center;
@@ -136,12 +137,22 @@ img {
 }
 [data-char]:after {
   animation-name: glitch-switch;
+  -webkit-animation-name: glitch-switch;
   --txt: attr(data-char);
   animation-duration: 0.25s;
+  -webkit-animation-duration: 0.25s;
+
   animation-delay: 0.3s;
+  -webkit-animation-delay: 0.3s;
   animation-timing-function: steps(0.5);
+  -webkit-animation-timing-function: steps(0.5);
+
   animation-iteration-count: var(--count);
+  -webkit-animation-iteration-count: var(--count);
+
   animation-fill-mode: backwards;
+  -webkit-animation-fill-mode: backwards;
+
   content: var(--txt);
   color: #ffffff;
   position: absolute;
@@ -150,6 +161,42 @@ img {
 }
 
 @keyframes glitch-switch {
+  0% {
+    content: var(--char-0);
+  }
+  10% {
+    content: var(--char-1);
+  }
+  20% {
+    content: var(--char-2);
+  }
+  30% {
+    content: var(--char-3);
+  }
+  40% {
+    content: var(--char-4);
+  }
+  50% {
+    content: var(--char-5);
+  }
+  60% {
+    content: var(--char-6);
+  }
+  70% {
+    content: var(--char-7);
+  }
+  80% {
+    content: var(--char-8);
+  }
+  90% {
+    content: var(--char-9);
+  }
+  100% {
+    content: var(--txt);
+  }
+}
+
+@-webkit-keyframes glitch-switch {
   0% {
     content: var(--char-0);
   }
