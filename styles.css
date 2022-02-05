@@ -1,5 +1,6 @@
 body {
-  background-color: #217e80;
+  background: linear-gradient(315deg, #217e80 50%, #ebb679 110%);
+  /* ; */
   font-family: "ubuntu", "sans-serif";
 }
 
@@ -60,7 +61,7 @@ main h1::after {
 
 section {
   /* max-width: 50vw; */
-  background: #e84e4e;
+  background: linear-gradient(45deg, #e84e4e 65%, #ebb679 110%);
   margin: 2em auto;
   border-radius: 1em;
   padding: 2em;
@@ -94,8 +95,8 @@ section:hover {
 
 img {
   display: block;
-  height: 5em;
-  width: 5em;
+  height: 4em;
+  width: 4em;
   height: auto;
 }
 
